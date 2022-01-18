@@ -30,6 +30,8 @@ env = environ.Env(
     DATABASE_PORT=(int, 5432),
 )
 
+
+
 environ.Env.read_env()
 
 ENVIRONMENT = env.str("ENVIRONMENT")
@@ -40,6 +42,8 @@ ENVIRONMENT = env.str("ENVIRONMENT")
 SECRET_KEY = env.str("SECRET_KEY")
 
 DEBUG = env.bool("DEBUG")
+
+print("DEBUG", DEBUG)
 
 ALLOWED_HOSTS = tuple(env.list("ALLOWED_HOSTS"))
 
@@ -60,7 +64,7 @@ INSTALLED_APPS = [
     "corsheaders",
     # local
     "accounts",
-    "things",
+    "cookie_stands",
 ]
 
 MIDDLEWARE = [
